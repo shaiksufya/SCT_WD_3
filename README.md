@@ -1,4 +1,10 @@
-Project: 🎮 Tic-Tac-Toe Web Application
+Check here the Project Output:
+
+https://tictactoesufya.netlify.app/
+
+🌐 Project Title: 🎮 Tic-Tac-Toe Web Application
+
+🎯 Objective:
 
 This is a fully functional and interactive Tic-Tac-Toe web application that supports multiple game modes and grid sizes. Play against a friend or challenge an AI opponent — whether you're in for a classic 3x3 battle or want to try your hand at the 4x4 or 5x5 versions!
 
