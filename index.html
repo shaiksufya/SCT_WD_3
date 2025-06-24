@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe Pro</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <div id="app" class="light-mode">
+    <!-- Top Right Controls -->
+    <div class="top-controls">
+      <button id="soundToggle" class="control-btn">
+        <i data-lucide="volume-2" class="icon"></i>
+      </button>
+      <button id="settingsToggle" class="control-btn">
+        <i data-lucide="settings" class="icon"></i>
+      </button>
+      <button id="darkModeToggle" class="control-btn">
+        <i data-lucide="moon" class="icon"></i>
+      </button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Title -->
+      <h1 class="game-title">🎮 Tic-Tac-Toe Pro</h1>
+
+      <!-- Grid Size and Level Display -->
+      <div class="info-display">
+        <div class="info-badge" id="gridSizeBadge">Grid: 3×3</div>
+        <div class="divider"></div>
+        <div class="info-badge" id="levelBadge">Level: Medium</div>
+      </div>
+
+      <!-- Score Board -->
+      <div class="score-board">
+        <div class="score-section">
+          <div class="score-value" id="playerScore">0</div>
+          <div class="score-label" id="playerLabel">You</div>
+        </div>
+        <div class="score-section">
+          <div class="score-value" id="tiesScore">0</div>
+          <div class="score-label">Ties</div>
+        </div>
+        <div class="score-section">
+          <div class="score-value" id="aiScore">0</div>
+          <div class="score-label" id="aiLabel">AI</div>
+        </div>
+      </div>
+
+      <!-- Game Board -->
+      <div class="game-board" id="gameBoard"></div>
+
+      <!-- Game Controls -->
+      <div class="game-controls">
+        <button id="newGameBtn" class="control-btn large">New Game</button>
+        <button id="resetScoresBtn" class="control-btn large">Reset Scores</button>
+      </div>
+
+      <!-- Current Player Indicator -->
+      <div class="player-indicator" id="playerIndicator">Your Turn</div>
+    </div>
+
+    <!-- Settings Dialog -->
+    <div class="dialog-overlay" id="settingsDialog">
+      <div class="dialog-content">
+        <div class="dialog-header">
+          <h2>Game Settings</h2>
+        </div>
+        <div class="dialog-body">
+          <div class="setting-group">
+            <label>Board Size</label>
+            <select id="boardSizeSelect">
+              <option value="3">3×3 (Classic)</option>
+              <option value="4">4×4 (Medium)</option>
+              <option value="5">5×5 (Large)</option>
+            </select>
+          </div>
+          
+          <div class="setting-group">
+            <label>Game Mode</label>
+            <select id="gameModeSelect">
+              <option value="player">Player vs Player</option>
+              <option value="ai">Player vs AI</option>
+            </select>
+          </div>
+          
+          <div class="setting-group" id="difficultyGroup">
+            <label>AI Difficulty</label>
+            <select id="difficultySelect">
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </div>
+          
+          <button id="saveSettingsBtn" class="dialog-btn">Save Settings</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Result Dialog -->
+    <div class="dialog-overlay" id="resultDialog">
+      <div class="dialog-content">
+        <div class="dialog-header">
+          <h2>Game Over!</h2>
+        </div>
+        <div class="dialog-body">
+          <div class="result-message" id="resultMessage"></div>
+          <div class="result-buttons">
+            <button id="playAgainBtn" class="dialog-btn">Play Again</button>
+            <button id="closeResultBtn" class="dialog-btn outline">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
